@@ -1,11 +1,14 @@
 name = "lasse_schorn"
+dataset_name = "application_record"
+column_categorical = "CODE_GENDER"
+column_continuous  = "AMT_INCOME_TOTAL"
+csv_dataset_name =dataset_name + ".csv"
 
-csv_dataset_name ="application_record.csv"
+columns = [column_continuous,column_categorical]
 
-
-data_sets_dir   = name + "/versuchsreihe/datasets/"
-result_dir      = name + "/versuchsreihe/results/"
-statistics_dir  = name + "/versuchsreihe/statistics/" 
+data_sets_dir   = "versuchsreihe/" + dataset_name + "/datasets/"
+result_dir      = "versuchsreihe/" + dataset_name + "/results/"
+statistics_dir  = "versuchsreihe/" + dataset_name + "/statistics/" 
 
 methode_1 = "Numerical Imputation"
 methode_2 = "Categorical Imputation"
@@ -22,9 +25,9 @@ mcar_dir = data_sets_dir + missing_folder + missing_type_2 + "/"
 mnar_dir = data_sets_dir + missing_folder + missing_type_3 + "/"
 
 
-orginal_df_dir = data_sets_dir + "orginal/"
+original_df_dir = data_sets_dir + "original/"
 prepair_df_dir = data_sets_dir + "prepaired/"
-orginal_df = orginal_df_dir + csv_dataset_name 
+original_df = original_df_dir + csv_dataset_name 
 prepaired_df = prepair_df_dir + csv_dataset_name 
 column_name = "AMT_INCOME_TOTAL"
 
