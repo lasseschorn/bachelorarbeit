@@ -1,37 +1,71 @@
 name = "lasse_schorn"
-dataset_name = "application_record"
-column_categorical = "CODE_GENDER"
-column_continuous  = "AMT_INCOME_TOTAL"
-csv_dataset_name =dataset_name + ".csv"
+dataset_name_1 = "application_record"
+dataset_name_2 = "application_record"
+dataset_name_3 = "application_record"
+dataset_name_4 = "application_record"
+# versuchsreihe/datasets/
+data_sets_dir   = "versuchsreihe/" +  "datasets/" 
+# application_record.csv
+csv_dataset_name_1 =dataset_name_1 + ".csv"
+csv_dataset_name_2 =dataset_name_2 + ".csv"
+csv_dataset_name_3 =dataset_name_3 + ".csv"
+csv_dataset_name_4 =dataset_name_4 + ".csv"
+# versuchsreihe/datasets/ /original/
+original_df_dir = "data/" 
 
-columns = [column_continuous,column_categorical]
+original_df_1 = original_df_dir + csv_dataset_name_1
+original_df_2 = original_df_dir + csv_dataset_name_1
+original_df_3 = original_df_dir + csv_dataset_name_1
+original_df_4 = original_df_dir + csv_dataset_name_1
 
-data_sets_dir   = "versuchsreihe/" + dataset_name + "/datasets/"
-result_dir      = "versuchsreihe/" + dataset_name + "/results/"
-statistics_dir  = "versuchsreihe/" + dataset_name + "/statistics/" 
 
-methode_1 = "Numerical Imputation"
-methode_2 = "Categorical Imputation"
-methode_3 = "Korrelation"
-methode_4 = "Rondom Forest"
+column_1 = "CODE_GENDER"
+column_2 = "AMT_INCOME_TOTAL"
+column_3 ='3'
+column_4 ='4'
+column_5 ='5'
+column_6 ='6'
+column_7 ='7'
+column_8 ='8'
+column_9 ='9'
+
+columns = [column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9 ]
+application_record = [column_2]
+#,column_categorical1
+data_sets_dir   = "versuchsreihe/" + "datasets/"
+result_dir      = "versuchsreihe/" + "results/"
+statistics_dir  = "versuchsreihe/" + "statistics/" 
+
+methode_1 = "means"
+methode_2 = "modus"
+methode_3 = "median"
+methode_4 = "correlation_1"
+methode_5 = "correlation_2"
+methode_6 = "correlation_3"
+methode_7 = "rondom_forest_classification"
+methode_8 = "rondom_forest_regression"
+methode_9 = "neuronal_network"
+
+#methodes = [methode_1, methode_2, methode_3, methode_4, methode_5, methode_6, methode_7, methode_8, methode_9]
+
 
 missing_folder = "/missing_datasets/"
-missing_type_1 = "MAR"
-missing_type_2 = "MCAR"
-missing_type_3 = "MNAR" 
 
-mar_dir  = data_sets_dir + missing_folder + missing_type_1 + "/"
-mcar_dir = data_sets_dir + missing_folder + missing_type_2 + "/"
-mnar_dir = data_sets_dir + missing_folder + missing_type_3 + "/"
+y_train = 'y_train'
+x_train = 'x_train'
+y_test  = 'y_test'
+x_test  = 'x_test'
+
+train_set = [y_train, x_train]
+test_set = [y_test, x_test]
 
 
-original_df_dir = data_sets_dir + "original/"
+
+
 prepair_df_dir = data_sets_dir + "prepaired/"
-original_df = original_df_dir + csv_dataset_name 
-prepaired_df = prepair_df_dir + csv_dataset_name 
-column_name = "AMT_INCOME_TOTAL"
+prepaired_df = prepair_df_dir + csv_dataset_name_1 
 
 
-missing_rats = [.1,.2,.3,.4,.5,.6,.7,.8]
+missing_rats = [.0,.1,.25,.5,.8]
 
-random_seed = 0
+random_seed = 42
