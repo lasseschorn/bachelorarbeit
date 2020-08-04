@@ -55,6 +55,8 @@ y_train = 'y_train'
 x_train = 'X_train'
 y_test  = 'y_test'
 x_test  = 'X_test'
+sub_columns = 'columns' 
+sub_train = 'train'
 
 train_set = [y_train, x_train]
 test_set = [y_test, x_test]
