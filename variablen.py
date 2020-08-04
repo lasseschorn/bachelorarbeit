@@ -52,9 +52,9 @@ methode_9 = "neuronal_network"
 missing_folder = "/missing_datasets/"
 
 y_train = 'y_train'
-x_train = 'x_train'
+x_train = 'X_train'
 y_test  = 'y_test'
-x_test  = 'x_test'
+x_test  = 'X_test'
 
 train_set = [y_train, x_train]
 test_set = [y_test, x_test]
